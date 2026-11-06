@@ -3,9 +3,9 @@ import { ArrowRightIcon, FacebookIcon, InstagramIcon, MailIcon } from "./Icons";
 import Typewriter from "./Typewriter";
 
 // TODO: put Asaduzzaman's real links here
-const FACEBOOK_URL = "https://www.facebook.com/";
-const INSTAGRAM_URL = "https://www.instagram.com/";
-const EMAIL = "your-email@gmail.com";
+const FACEBOOK_URL = "#";
+const INSTAGRAM_URL = "#";
+const EMAIL = "mralamin0001@gmail.com";
 
 const badges = [
   { t: "Drone Pilot", cls: "-left-6 top-10", d: "0s" },

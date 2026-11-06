@@ -1,9 +1,9 @@
 import Image from "next/image";
-import { ArrowRightIcon, FacebookIcon, InstagramIcon, MailIcon } from "./Icons";
+import { ArrowRightIcon, FacebookIcon, InstagramIcon, MailIcon, WhatsAppIcon } from "./Icons";
 
 // TODO: put Asaduzzaman's real links here
-const FACEBOOK_URL = "#";
-const INSTAGRAM_URL = "#";
+const FACEBOOK_URL = "https://www.facebook.com/share/19o7PGXq4E/";
+const WhatsApp_URL = "#";
 const EMAIL = "mralamin0001@gmail.com";
 
 const badges = [
@@ -14,7 +14,7 @@ const badges = [
 
 const socials = [
   { h: FACEBOOK_URL, I: FacebookIcon, l: "Facebook" },
-  { h: INSTAGRAM_URL, I: InstagramIcon, l: "Instagram" },
+  { h: WhatsApp_URL, I: WhatsAppIcon, l: "WhatsApp" },
   { h: `mailto:${EMAIL}`, I: MailIcon, l: "Email" },
 ];
 

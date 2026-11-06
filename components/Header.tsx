@@ -6,7 +6,7 @@ const links = [
   { href: "#personal-work", label: "Personal Work" },
   { href: "#before-after", label: "Before/After" },
   { href: "#about", label: "About" },
-  { href: "#education", label: "Education" },
+  // { href: "#education", label: "Education" },
   { href: "#contact", label: "Contact" },
 ];
 

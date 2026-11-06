@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
-import Education from "@/components/Education";
+// import Education from "@/components/Education";
 import Contact from "@/components/Contact";
 import ScrollUI from "@/components/ScrollUI";
 import CommandPalette from "@/components/CommandPalette";
@@ -23,7 +23,7 @@ export default function Home() {
         <PersonalWork />
         <BeforeAfter />
         <About />
-        <Education />
+        {/* <Education /> */}
         <Contact />
       </main>
     </main>

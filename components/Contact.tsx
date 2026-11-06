@@ -9,9 +9,7 @@ const links = [
   { href: `mailto:${EMAIL}`, I: MailIcon, label: "Email", text: EMAIL },
   { href: "tel:+8801710978787", I: PhoneIcon, label: "Call", text: "+8801710978787" },
   { href: "https://wa.me/8801617681536", I: WhatsAppIcon, label: "WhatsApp", text: "+8801617-681536", ext: true },
-
-  { href: "#", I: InstagramIcon, label: "Instagram", text: "@Asaduzzaman_Al_Amin", ext: true },
-  { href: "#", I: FacebookIcon, label: "Facebook", text: "@Asaduzzaman_Al_Amin", ext: true },
+  { href: "https://www.facebook.com/share/1FCBMd8LEF/", I: FacebookIcon, label: "Facebook", text: " Zaman Film & Poduction", ext: true },
 ];
 
 const services = [

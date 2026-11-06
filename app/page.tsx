@@ -20,10 +20,10 @@ export default function Home() {
       <CommandPalette />
       <main>
         <Hero />
-        <About />
         <RestaurantWork />
         <PersonalWork />
         <BeforeAfter />
+        <About />
         <Education />
         <Hobbies />
         <Contact />

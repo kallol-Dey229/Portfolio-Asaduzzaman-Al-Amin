@@ -3,24 +3,40 @@ import Reveal from "./Reveal";
 import SectionTitle from "./SectionTitle";
 
 const stats = [
-  { value: 20, suffix: "+", label: "Videos edited" },
+  { value: 200, suffix: "+", label: "Videos captured" },
   { value: 4, suffix: "K", label: "Delivery resolution" },
-  { value: 2, suffix: "", label: "Drones in the kit" },
-  { value: 2, suffix: "+", label: "Years behind the lens", },
+  { value: 3, suffix: "", label: "Drones in the kit" },
+  { value: 5, suffix: "+", label: "Years behind the lens" },
 ];
 
 const gear = [
   {
-    name: "DJI Avata 360",
-    role: "Immersive FPV",
-    desc: "Fast, flowing 360° flights that get reframed in post into shots a normal camera can't make.",
-    tag: "360° · FPV",
+    role: "Aerial",
+    title: "Drones",
+    tag: "3 drones",
+    items: ["DJI Air 3", "DJI Air 3S", "DJI Air 2"],
+    desc: "Clean establishing shots, smooth reveals and real scale for every project.",
   },
   {
-    name: "DJI Air 3",
-    role: "Cinematic aerials",
-    desc: "Dual-camera drone for clean establishing shots, smooth reveals and layered compression.",
-    tag: "Wide + Tele",
+    role: "Capture",
+    title: "Cameras",
+    tag: "Sony",
+    items: ["Sony FX3", "Sony A7 IV", "Sony A7 III"],
+    desc: "Cinema-grade footage for commercials, documentaries and corporate work.",
+  },
+  {
+    role: "Glass",
+    title: "Lenses",
+    tag: "Wide to tele",
+    items: ["Sony GM 24-70mm", "Sony GM 50mm", "Sony 85mm", "Sigma 16mm"],
+    desc: "From wide environments to tight portraits with a cinematic look.",
+  },
+  {
+    role: "Stabilize",
+    title: "Gimbals",
+    tag: "DJI RS",
+    items: ["DJI RS 5", "DJI RS 4"],
+    desc: "Smooth, steady motion for walk-and-talk shots and moving cameras.",
   },
 ];
 
@@ -32,18 +48,29 @@ const workflow = [
 ];
 
 const facts = [
-  { label: "Based in", value: "Dhaka, Bangladesh" },
-  { label: "Focus", value: "Aerial & cinematic edits" },
+  { label: "Based in", value: "Rajshahi, Bangladesh" },
+  { label: "Focus", value: "Commercial, documentary & aerial" },
   { label: "Languages", value: "Bangla · English" },
 ];
 
-const tools = ["Premiere Pro", "DaVinci Resolve", "After Effects", "Avata 360", "Air 3"];
+const services = [
+  "Facebook Ad Video",
+  "Documentary",
+  "OVC & Commercial",
+  "Corporate Work",
+  "Drone Videography",
+];
+
+const tools = ["Premiere Pro", "DaVinci Resolve", "After Effects", "Sony FX3", "DJI Air 3S"];
 
 export default function About() {
   return (
     <section id="about" className="relative py-24">
       <div className="mx-auto max-w-6xl px-6">
-        <SectionTitle eyebrow="About me" title="I shoot from the sky and tell the story in the cut" />
+        <SectionTitle
+          eyebrow="About me"
+          title="I shoot from the ground and the sky, and tell the story in the cut"
+        />
 
         <div className="mt-12 grid gap-6 md:grid-cols-3">
           {/* Bio card, styled like a viewfinder */}
@@ -65,9 +92,10 @@ export default function About() {
 
               <div className="c-muted space-y-4 text-[16.5px] leading-relaxed">
                 <p>
-                  I&apos;m a video editor and aerial filmmaker. I fly the DJI Avata 360 and DJI Air 3 to capture
-                  footage with real motion and scale, then shape it into edits with a clear rhythm, a consistent
-                  look and a reason for every cut.
+                  I&apos;m Asaduzzaman Al Amin, a cinematographer and drone pilot based in Rajshahi, Bangladesh.
+                  I shoot Facebook ad videos, documentaries, OVC &amp; commercials and corporate work using the
+                  Sony FX3 and A7 series, and I fly the DJI Air 3, Air 3S and Air 2 to add real motion and
+                  scale to every project.
                 </p>
                 <p>
                   I care about the whole pipeline: planning the shot, flying it safely, and finishing it with
@@ -85,6 +113,20 @@ export default function About() {
                 ))}
               </div>
 
+              <div className="mt-6">
+                <p className="ff-mono c-muted mb-2 text-[11px] uppercase tracking-wider">What I do</p>
+                <div className="flex flex-wrap gap-2">
+                  {services.map((s) => (
+                    <span
+                      key={s}
+                      className="ff-mono rounded-full border border-current/20 px-3 py-1 text-[11px] uppercase tracking-wider"
+                    >
+                      {s}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
               <div className="mt-6 flex flex-wrap gap-2">
                 {tools.map((t) => (
                   <span
@@ -98,9 +140,9 @@ export default function About() {
             </div>
           </Reveal>
 
-          {/* Stats column */}
-          <div className="grid grid-cols-2 gap-4 md:grid-cols-1">
-            {stats.slice(0, 2).map((s, i) => (
+          {/* Stats grid */}
+          <div className="grid grid-cols-2 gap-4">
+            {stats.map((s, i) => (
               <Reveal key={s.label} delay={i * 120}>
                 <div className="glass h-full rounded-3xl p-6">
                   <p className="ff-head grad-text text-4xl font-bold">
@@ -113,30 +155,26 @@ export default function About() {
           </div>
 
           {/* Gear cards */}
-          {gear.map((g, i) => (
-            <Reveal key={g.name} delay={i * 120} className={i === 0 ? "md:col-span-1" : "md:col-span-1"}>
-              <div className="glass group h-full rounded-3xl p-6 transition-transform duration-300 hover:-translate-y-1">
-                <div className="flex items-center justify-between">
-                  <span className="ff-mono c-muted text-[11px] uppercase tracking-[0.2em]">{g.role}</span>
-                  <span className="ff-mono rounded-full border border-current/20 px-2.5 py-0.5 text-[10px] uppercase tracking-wider c-muted">
-                    {g.tag}
-                  </span>
-                </div>
-                <h3 className="ff-head grad-text mt-4 text-2xl font-bold">{g.name}</h3>
-                <p className="c-muted mt-2 text-[15px] leading-relaxed">{g.desc}</p>
-              </div>
-            </Reveal>
-          ))}
-
-          {/* Remaining stats */}
-          <div className="grid grid-cols-2 gap-4 md:grid-cols-1">
-            {stats.slice(2).map((s, i) => (
-              <Reveal key={s.label} delay={i * 120}>
-                <div className="glass h-full rounded-3xl p-6">
-                  <p className="ff-head grad-text text-4xl font-bold">
-                    <Counter to={s.value} suffix={s.suffix} />
-                  </p>
-                  <p className="ff-mono c-muted mt-1 text-[11px] uppercase tracking-wider">{s.label}</p>
+          <div className="grid gap-6 sm:grid-cols-2 md:col-span-3 lg:grid-cols-4">
+            {gear.map((g, i) => (
+              <Reveal key={g.title} delay={i * 120}>
+                <div className="glass group h-full rounded-3xl p-6 transition-transform duration-300 hover:-translate-y-1">
+                  <div className="flex items-center justify-between">
+                    <span className="ff-mono c-muted text-[11px] uppercase tracking-[0.2em]">{g.role}</span>
+                    <span className="ff-mono rounded-full border border-current/20 px-2.5 py-0.5 text-[10px] uppercase tracking-wider c-muted">
+                      {g.tag}
+                    </span>
+                  </div>
+                  <h3 className="ff-head grad-text mt-4 text-2xl font-bold">{g.title}</h3>
+                  <ul className="ff-mono mt-3 space-y-1.5 text-sm">
+                    {g.items.map((item) => (
+                      <li key={item} className="flex items-center gap-2">
+                        <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-current opacity-40" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                  <p className="c-muted mt-4 text-[14px] leading-relaxed">{g.desc}</p>
                 </div>
               </Reveal>
             ))}

@@ -21,12 +21,11 @@ export default function CommandPalette() {
     { label: "Go to Before / After", hint: "Section", run: () => go("before-after") },
     { label: "Go to About", hint: "Section", run: () => go("about") },
     { label: "Go to Education", hint: "Section", run: () => go("education") },
-    { label: "Go to Hobbies", hint: "Section", run: () => go("beyond") },
     { label: "Go to Contact", hint: "Section", run: () => go("contact") },
     { label: "Toggle light / dark theme", hint: "Action", run: () => window.dispatchEvent(new Event("toggle-theme")) },
     { label: "Send me an email", hint: "Action", run: () => (window.location.href = "mailto:rafsan.zaman.pro@gmail.com") },
-    { label: "Open Instagram", hint: "Link", run: () => open("https://www.instagram.com/rafsan_zaman_abir") },
-    { label: "Open Facebook", hint: "Link", run: () => open("https://www.facebook.com/share/1NESxLrUj2/?mibextid=wwXIfr") },
+    { label: "Open Instagram", hint: "Link", run: () => open("#") },
+    { label: "Open Facebook", hint: "Link", run: () => open("#") },
   ],
   []
 );

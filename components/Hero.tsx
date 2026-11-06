@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { ArrowRightIcon, FacebookIcon, InstagramIcon, MailIcon } from "./Icons";
-import Typewriter from "./Typewriter";
 
 // TODO: put Asaduzzaman's real links here
 const FACEBOOK_URL = "#";
@@ -17,6 +16,14 @@ const socials = [
   { h: FACEBOOK_URL, I: FacebookIcon, l: "Facebook" },
   { h: INSTAGRAM_URL, I: InstagramIcon, l: "Instagram" },
   { h: `mailto:${EMAIL}`, I: MailIcon, l: "Email" },
+];
+
+const skills = [
+  { n: "01", t: "Drone Cinematography", s: "Aerial · 4K" },
+  { n: "02", t: "Facebook Ad Videos", s: "Social · Ads" },
+  { n: "03", t: "Documentary Shoots", s: "Story-driven" },
+  { n: "04", t: "Corporate & OVC Films", s: "Brand · Business" },
+  { n: "05", t: "Wedding Drone Films", s: "Events · Aerial" },
 ];
 
 const highlights = [
@@ -52,24 +59,28 @@ export default function Hero() {
             Asaduzzaman <span className="grad-text">Al Amin</span>
           </h1>
 
-          <p className="ff-head mt-4 text-2xl font-medium sm:text-3xl">
-            Specialising in{" "}
-            <Typewriter
-              words={[
-                "Drone Cinematography",
-                "Facebook Ad Videos",
-                "Documentary Shoots",
-                "Corporate & OVC Films",
-                "Wedding Drone Films",
-              ]}
-            />
-          </p>
-
           <p className="c-muted mt-6 max-w-xl text-[17px] leading-relaxed">
             I&apos;m a cinematographer and drone pilot based in Rajshahi. I shoot aerial and ground
             footage for brands, businesses, documentaries and weddings, from Facebook ad videos and
             commercial shoots to corporate films, with clean, cinematic visuals that tell the story.
           </p>
+
+          {/* ---------- Skill tiles (replaces Typewriter) ---------- */}
+          <div className="mt-8 max-w-xl">
+            <p className="ff-mono c-muted mb-3 text-[11px] uppercase tracking-[0.2em]">What I shoot</p>
+            <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3">
+              {skills.map((s) => (
+                <li
+                  key={s.n}
+                  className="glass group rounded-2xl px-4 py-3 transition-transform duration-300 hover:-translate-y-1 last:col-span-2 sm:last:col-span-1"
+                >
+                  <span className="ff-mono grad-text text-[11px] font-semibold">{s.n}</span>
+                  <p className="ff-head mt-1 text-[15px] font-semibold leading-snug">{s.t}</p>
+                  <p className="ff-mono c-muted mt-1 text-[10px] uppercase tracking-wider">{s.s}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
 
           <div className="mt-9 flex flex-wrap items-center gap-4">
             <a

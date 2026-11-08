@@ -9,7 +9,7 @@ const links = [
   // { href: "#education", label: "Education" },
   { href: "#contact", label: "Contact" },
 ];
-//
+
 export default function Header() {
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState("");

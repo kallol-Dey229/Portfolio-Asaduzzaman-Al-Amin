@@ -59,7 +59,7 @@ function Card({ v }: { v: PersonalVideo }) {
             aria-label={`Play ${v.title}`}
             className="absolute inset-0 h-full w-full"
           >
-            {/* eslint-disable-next-line @next/next/no-img-element */}
+            
             <img
               src={poster}
               alt={v.title}

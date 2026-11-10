@@ -127,53 +127,53 @@ export default function Hero() {
         </div>
 
         {/* ---------- Right: portrait in a viewfinder ---------- */}
-        <div className="relative mx-auto w-64 sm:w-72">
-          <div className="relative">
-            <div
-              className="absolute -inset-3 rounded-[1.6rem] opacity-60 blur-2xl"
-              style={{ background: "linear-gradient(135deg,var(--a),var(--b))" }}
-            />
-            <div
-              className="relative overflow-hidden rounded-[1.4rem] border"
-              style={{ background: "var(--bg2)", borderColor: "var(--border)" }}
-            >
-              {/* TODO: replace with Asaduzzaman's photo in /public/images */}
-              <Image
-                src="/images/abir_img.PNG"
-                alt="Portrait of Asaduzzaman Al Amin"
-                width={900}
-                height={1200}
-                priority
-                className="h-full w-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-black/20" />
+<div className="relative mx-auto w-64 sm:w-72">
+  <div className="relative">
+    <div
+      className="absolute -inset-3 rounded-[1.6rem] opacity-60 blur-2xl"
+      style={{ background: "linear-gradient(135deg,var(--a),var(--b))" }}
+    />
+    <div
+      className="relative aspect-[4/5] w-full overflow-hidden rounded-[1.4rem] border"
+      style={{ background: "var(--bg2)", borderColor: "var(--border)" }}
+    >
+      <Image
+        src="/images/Asaduzzaman-Al-Amin-photo.jpeg"
+        alt="Portrait of Asaduzzaman Al Amin"
+        fill
+        priority
+        sizes="(min-width: 640px) 288px, 256px"
+        className="object-cover"
+        style={{ objectPosition: "50% 30%" }}
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-black/20" />
 
-              {/* viewfinder overlay */}
-              <span className="absolute left-4 top-4 h-5 w-5 border-l-2 border-t-2 border-white/70" />
-              <span className="absolute right-4 top-4 h-5 w-5 border-r-2 border-t-2 border-white/70" />
-              <span className="absolute bottom-4 left-4 h-5 w-5 border-b-2 border-l-2 border-white/70" />
-              <span className="absolute bottom-4 right-4 h-5 w-5 border-b-2 border-r-2 border-white/70" />
+      {/* viewfinder overlay */}
+      <span className="absolute left-4 top-4 h-5 w-5 border-l-2 border-t-2 border-white/70" />
+      <span className="absolute right-4 top-4 h-5 w-5 border-r-2 border-t-2 border-white/70" />
+      <span className="absolute bottom-4 left-4 h-5 w-5 border-b-2 border-l-2 border-white/70" />
+      <span className="absolute bottom-4 right-4 h-5 w-5 border-b-2 border-r-2 border-white/70" />
 
-              <span className="ff-mono absolute left-7 top-7 flex items-center gap-2 text-[10px] uppercase tracking-[0.2em] text-white/90">
-                <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-red-500" />
-                REC
-              </span>
-              <span className="ff-mono absolute bottom-7 left-7 text-[10px] uppercase tracking-[0.2em] text-white/80">
-                Aerial · Cinematic
-              </span>
-            </div>
-          </div>
+      <span className="ff-mono absolute left-7 top-7 flex items-center gap-2 text-[10px] uppercase tracking-[0.2em] text-white/90">
+        <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-red-500" />
+        REC
+      </span>
+      <span className="ff-mono absolute bottom-7 left-7 text-[10px] uppercase tracking-[0.2em] text-white/80">
+        Aerial · Cinematic
+      </span>
+    </div>
+  </div>
 
-          {badges.map((b) => (
-            <span
-              key={b.t}
-              className={`glass float ff-mono absolute ${b.cls} rounded-full px-3 py-1.5 text-[11px] shadow-lg`}
-              style={{ animationDelay: b.d }}
-            >
-              {b.t}
-            </span>
-          ))}
-        </div>
+  {badges.map((b) => (
+    <span
+      key={b.t}
+      className={`glass float ff-mono absolute ${b.cls} rounded-full px-3 py-1.5 text-[11px] shadow-lg`}
+      style={{ animationDelay: b.d }}
+    >
+      {b.t}
+    </span>
+  ))}
+</div>
       </div>
 
       <a href="#about" aria-label="Scroll down" className="absolute bottom-6 left-1/2 hidden -translate-x-1/2 md:block">

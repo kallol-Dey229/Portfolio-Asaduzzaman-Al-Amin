@@ -8,7 +8,7 @@ const EMAIL = "mralamin0001@gmail.com";
 
 const badges = [
   { t: "Drone Pilot", cls: "-left-6 top-10", d: "0s" },
-  { t: "Dronegraphy", cls: "-right-5 top-32", d: "0.8s" },
+  { t: "DOP", cls: "-right-5 top-32", d: "0.8s" },
   { t: "Cinematographer", cls: "-left-8 bottom-24", d: "1.4s" },
 ];
 
@@ -60,9 +60,13 @@ export default function Hero() {
           </h1>
 
           <p className="c-muted mt-6 max-w-xl text-[17px] leading-relaxed">
-            I&apos;m a cinematographer and drone pilot based in Rajshahi. I shoot aerial and ground
+            {/* I&apos;m a cinematographer and drone pilot based in Rajshahi. I shoot aerial and ground
             footage for brands, businesses, documentaries and weddings, from Facebook ad videos and
-            commercial shoots to corporate films, with clean, cinematic visuals that tell the story.
+            commercial shoots to corporate films, with clean, cinematic visuals that tell the story. */}
+             <br /><br />
+            আমি আসাদুজ্জামান আল আমিন, রাজশাহী-based একজন Cinematographer ও Drone Pilot। Brand, ব্যবসা,
+            Documentary আর বিয়ের অনুষ্ঠানের জন্য আকাশ ও মাটি, দুই দিক থেকেই cinematic footage তুলি। Facebook
+            ad থেকে corporate film পর্যন্ত, প্রতিটা ফ্রেমে থাকে গল্প বলার ছোঁয়া।
           </p>
 
           {/* ---------- Skill tiles (replaces Typewriter) ---------- */}

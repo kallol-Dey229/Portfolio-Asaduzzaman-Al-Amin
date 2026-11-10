@@ -75,13 +75,13 @@ function Card({ v }: { v: RallyVideo }) {
 
             {v.featured && (
               <span className="btn-grad ff-mono absolute left-6 top-6 rounded-full px-3 py-1 text-[10.5px] font-medium uppercase tracking-wider">
-                ★ Featured
+                ★ Featured Coverage
               </span>
             )}
 
             {v.gear && (
               <span className="ff-mono absolute bottom-5 left-6 right-6 truncate text-left text-[10px] uppercase tracking-[0.2em] text-white/80">
-                {v.gear}
+                Gear · {v.gear}
               </span>
             )}
 
@@ -149,7 +149,10 @@ export default function RallyWork() {
     <section id="rallies" className="relative py-24">
       <div className="mx-auto max-w-6xl px-6">
         <div className="flex flex-wrap items-end justify-between gap-6">
-          <SectionTitle eyebrow="Rally & Political Coverage" title="Capturing the crowd and the moment" />
+          <SectionTitle 
+            eyebrow="র‍্যালি ও রাজনৈতিক কভারেজ" 
+            title="Rally & Political Coverage | Capturing the crowd and the moment" 
+          />
           <div className="flex flex-wrap gap-2">
             {filters.map((f) => (
               <button
@@ -165,9 +168,8 @@ export default function RallyWork() {
           </div>
         </div>
 
-        <p className="c-muted mt-6 max-w-xl text-[15px] leading-relaxed">
-          Michil and rally coverage, public meetings and campaign videos, with drone shots that show the
-          real scale of the crowd and edits that carry the message.
+        <p className="c-muted mt-6 max-w-2xl text-[15px] leading-relaxed">
+          মিছিল এবং র‍্যালি কভারেজ, পাবলিক মিটিং ও ক্যাম্পেইন ভিডিও—যেখানে ড্রোন শটের মাধ্যমে জনতার প্রকৃত স্কেল ফুটিয়ে তোলা হয় এবং নিখুঁত এডিটিংয়ের সাহায্যে প্রতিটি বার্তা জোরালোভাবে উপস্থাপন করা হয়।
         </p>
 
         <div className="mt-12 grid items-start gap-6 lg:grid-cols-2">

@@ -51,7 +51,7 @@ export const foodVideos: FoodVideo[] = [
   {
     title: "Menu & Dish Shoot",
     tagline: "Clean, appetising dish footage for menus, social posts and delivery apps.",
-    category: "Menu Shoot",
+    category: "Documentary Shoots",
     playbackId: "YOUR_MUX_PLAYBACK_ID_3",
     ratio: "9/16",
     client: "Cafe name",

@@ -75,13 +75,13 @@ function Card({ v }: { v: FoodVideo }) {
 
             {v.featured && (
               <span className="btn-grad ff-mono absolute left-6 top-6 rounded-full px-3 py-1 text-[10.5px] font-medium uppercase tracking-wider">
-                ★ Featured
+                ★ Featured Story
               </span>
             )}
 
             {v.gear && (
               <span className="ff-mono absolute bottom-5 left-6 right-6 truncate text-left text-[10px] uppercase tracking-[0.2em] text-white/80">
-                {v.gear}
+                Gear · {v.gear}
               </span>
             )}
 
@@ -149,7 +149,10 @@ export default function FoodWork() {
     <section id="restaurants" className="relative py-24" style={{ background: "var(--bg2)" }}>
       <div className="mx-auto max-w-6xl px-6">
         <div className="flex flex-wrap items-end justify-between gap-6">
-          <SectionTitle eyebrow="Food & Restaurant Films" title="Making food look irresistible" />
+          <SectionTitle 
+            eyebrow="খাবার ও রেস্তোরাঁ ফিল্মস" 
+            title="Restaurant Films | Food Videos | Facebook Ads | Documentary Shoots" 
+          />
           <div className="flex flex-wrap gap-2">
             {filters.map((f) => (
               <button
@@ -165,9 +168,8 @@ export default function FoodWork() {
           </div>
         </div>
 
-        <p className="c-muted mt-6 max-w-xl text-[15px] leading-relaxed">
-          Restaurant films, Facebook food ads, reels and menu shoots, with close-up detail, clean lighting
-          and edits built to make people hungry.
+        <p className="c-muted mt-6 max-w-2xl text-[15px] leading-relaxed">
+          আমাদের তৈরি প্রফেশনাল রেস্তোরাঁ ফিল্ম, ফেসবুক ফুড অ্যাডস, রিলস এবং মেনু শুট—যা প্রতিটি খাবারের ক্লোজ-আপ ডিটেইল, নিখুঁত লাইটিং এবং প্রিমিয়াম এডিটিংয়ের মাধ্যমে দর্শকের ক্ষুধা বাড়িয়ে তুলতে জাদুকরী ভূমিকা পালন করে।
         </p>
 
         <div className="mt-12 grid items-start gap-6 lg:grid-cols-2">

@@ -75,13 +75,13 @@ function Card({ v }: { v: SportsVideo }) {
 
             {v.featured && (
               <span className="btn-grad ff-mono absolute left-6 top-6 rounded-full px-3 py-1 text-[10.5px] font-medium uppercase tracking-wider">
-                ★ Featured
+                ★ Featured Action
               </span>
             )}
 
             {v.gear && (
               <span className="ff-mono absolute bottom-5 left-6 right-6 truncate text-left text-[10px] uppercase tracking-[0.2em] text-white/80">
-                {v.gear}
+                Gear · {v.gear}
               </span>
             )}
 
@@ -149,7 +149,10 @@ export default function SportsWork() {
     <section id="sports" className="relative py-24" style={{ background: "var(--bg2)" }}>
       <div className="mx-auto max-w-6xl px-6">
         <div className="flex flex-wrap items-end justify-between gap-6">
-          <SectionTitle eyebrow="Sports & Action Films" title="Where every second counts" />
+          <SectionTitle 
+            eyebrow="স্পোর্টস ও অ্যাকশন ফিল্মস" 
+            title="Sports & Action Films | Where every second counts" 
+          />
           <div className="flex flex-wrap gap-2">
             {filters.map((f) => (
               <button
@@ -165,9 +168,8 @@ export default function SportsWork() {
           </div>
         </div>
 
-        <p className="c-muted mt-6 max-w-xl text-[15px] leading-relaxed">
-          Tournament coverage, match highlights and player promos, with drone views of the ground and
-          fast, energetic edits that keep the excitement of the game.
+        <p className="c-muted mt-6 max-w-2xl text-[15px] leading-relaxed">
+          টর্নামেন্ট কভারেজ, ম্যাচ হাইলাইটস এবং প্লেয়ার প্রোমো—যেখানে গ্রাউন্ডের চমৎকার ড্রোন ভিউ এবং দ্রুতগতির, এনার্জেটিক এডিটিংয়ের মাধ্যমে খেলার আসল রোমাঞ্চ নিখুঁতভাবে ফুটিয়ে তোলা হয়।
         </p>
 
         <div className="mt-12 grid items-start gap-6 lg:grid-cols-2">

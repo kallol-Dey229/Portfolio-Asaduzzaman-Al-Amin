@@ -38,9 +38,9 @@ export const foodVideos: FoodVideo[] = [
     category: "Facebook Ad",
     playbackId: "tl85kvxojFwdXqk5eTjS007TCXbc021DZC9zfM2yxWEpE",
     ratio: "9/16",
-    client: "Brand name",
+    client: "Food ad",
     location: "Rajshahi",
-    year: "2026",
+    year: "2025",
     gear: "Sony A7 IV · Sony GM 50mm",
     notes: [
       "Hook in the first 2 seconds with a close-up food reveal.",

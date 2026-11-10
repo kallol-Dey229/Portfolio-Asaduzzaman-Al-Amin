@@ -15,36 +15,32 @@ const gear = [
     title: "Drones",
     tag: "3 drones",
     items: ["DJI Air 3", "DJI Air 3S", "DJI Air 2"],
-    desc: "Clean establishing shots, smooth reveals and real scale for every project.",
   },
   {
     role: "Capture",
     title: "Cameras",
     tag: "Sony",
     items: ["Sony FX3", "Sony A7 IV", "Sony A7 III"],
-    desc: "Cinema-grade footage for commercials, documentaries and corporate work.",
   },
   {
     role: "Glass",
     title: "Lenses",
     tag: "Wide to tele",
     items: ["Sony GM 24-70mm", "Sony GM 50mm", "Sony 85mm", "Sigma 16mm"],
-    desc: "From wide environments to tight portraits with a cinematic look.",
   },
   {
     role: "Stabilize",
     title: "Gimbals",
     tag: "DJI RS",
     items: ["DJI RS 5", "DJI RS 4"],
-    desc: "Smooth, steady motion for walk-and-talk shots and moving cameras.",
   },
 ];
 
 const workflow = [
-  { step: "01", title: "Shoot", text: "Plan the flight, chase the light, capture clean source footage." },
-  { step: "02", title: "Cut", text: "Build the story and the rhythm, trimming everything that doesn't earn its place." },
-  { step: "03", title: "Grade", text: "Match shots, shape contrast and push a consistent look." },
-  { step: "04", title: "Deliver", text: "Sound, titles and export tuned for the platform it's going to." },
+  { step: "01", title: "Shoot (শুটিং)", text: "ফ্লাইট প্ল্যান করা, সঠিক আলোর পেছনে ছোটা এবং ক্লিন সোর্স ফুটেজ ক্যাপচার করা।" },
+  { step: "02", title: "Cut (এডিটিং)", text: "গল্প এবং রিদম তৈরি করা, এবং অপ্রয়োজনীয় ও অপ্রাসঙ্গিক অংশগুলো ছেঁটে ফেলা।" },
+  { step: "03", title: "Grade (কালার গ্রেডিং)", text: "শটগুলো ম্যাচ করা, কন্ট্রাস্ট ঠিক করা এবং একটি কনসিস্টেন্ট বা নিখুঁত লুক ফুটিয়ে তোলা।" },
+  { step: "04", title: "Deliver (ডেলিভারি)", text: "যে প্ল্যাটফর্মে যাবে তার উপযোগী করে সাউন্ড, টাইটেল এবং এক্সপোর্ট টিউন করা।" },
 ];
 
 const facts = [
@@ -92,15 +88,14 @@ export default function About() {
 
               <div className="c-muted space-y-4 text-[16.5px] leading-relaxed">
                 <p>
-                  I&apos;m Asaduzzaman Al Amin, a cinematographer and drone pilot based in Rajshahi, Bangladesh.
-                  I shoot Facebook ad videos, documentaries, OVC &amp; commercials and corporate work using the
-                  Sony FX3 and A7 series, and I fly the DJI Air 3, Air 3S and Air 2 to add real motion and
-                  scale to every project.
+                  <b>আসাদুজ্জামান আল আমিন</b> — রাজশাহীর একজন পেশাদার সিনেমাটোগ্রাফার এবং ড্রোন পাইলট।
+
+                  আমি Sony FX3 এবং A7 series ক্যামেরা ব্যবহার করে Facebook ad videos, documentaries, OVC & commercials এবং corporate work-এর মতো কাজগুলো অত্যন্ত নিখুঁতভাবে ফুটিয়ে তুলি। পাশাপাশি, প্রতিটি প্রজেক্টে রিয়েল মোশন ও বিশালতার অনুভূতি আনতে আমি উড়িয়ে থাকি DJI Air 3, Air 3S এবং Air 2 ড্রোন ।
                 </p>
                 <p>
-                  I care about the whole pipeline: planning the shot, flying it safely, and finishing it with
-                  color, sound and pacing that make people watch to the end. I&apos;m open to freelance work,
-                  collaborations and full-time roles.
+                  শটের প্রপার প্লানিং এবং নিরাপদে ড্রোন ওড়ানো থেকে শুরু করে — কালার গ্রেডিং, সাউন্ড ডিজাইন ও নিখুঁত পেসিংয়ের মাধ্যমে একটি ভিডিওকে শেষ পর্যন্ত ধরে রাখার পুরো পাইপলাইন নিয়েই আমি কাজ করি।
+
+                  বর্তমানে আমি freelance work, collaborations এবং full-time roles - এর জন্য উন্মুক্ত আছি।
                 </p>
               </div>
 
@@ -174,7 +169,6 @@ export default function About() {
                       </li>
                     ))}
                   </ul>
-                  <p className="c-muted mt-4 text-[14px] leading-relaxed">{g.desc}</p>
                 </div>
               </Reveal>
             ))}

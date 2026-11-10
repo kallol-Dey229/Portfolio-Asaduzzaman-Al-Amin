@@ -45,17 +45,16 @@ export default function Contact() {
         <Reveal>
           <p className="ff-mono mb-3 flex items-center gap-2 text-xs uppercase tracking-[0.25em]" style={{ color: "var(--b)" }}>
             <span className="h-2 w-2 animate-pulse rounded-full bg-red-500" />
-            Contact · Now booking
+            Contact · যোগাযোগ · booking
           </p>
           <h2 className="ff-head text-4xl font-bold leading-tight sm:text-6xl">
             Let&apos;s make <span className="grad-text">something cinematic.</span>
           </h2>
           <p className="ff-mono mt-4 text-sm uppercase tracking-wider" style={{ color: "var(--b)" }}>
-            Asaduzzaman Al Amin · Cinematographer &amp; Drone Pilot
+            আসাদুজ্জামান আল আমিন · Cinematographer &amp; Drone Pilot
           </p>
-          <p className="c-muted mt-4 max-w-md">
-            Facebook ad videos, documentaries, OVC &amp; commercials, corporate work and drone videography.
-            Tell me about your project and I&apos;ll get back to you.
+          <p className="c-muted mt-4 max-w-xl leading-relaxed">
+            Facebook ad videos, documentaries, OVC &amp; commercials, corporate work এবং drone videography নিয়ে কাজ করছি। আপনার প্রজেক্ট সম্পর্কে জানান, আমি দ্রুতই যোগাযোগ করব।
           </p>
 
           <div className="ff-mono mt-6 flex flex-wrap gap-2 text-[11px] uppercase tracking-wider">
@@ -87,9 +86,9 @@ export default function Contact() {
               ))}
 
               <div className="glass rounded-2xl px-5 py-4">
-                <p className="ff-mono c-muted text-[10.5px] uppercase tracking-wider">Based in</p>
+                <p className="ff-mono c-muted text-[10.5px] uppercase tracking-wider">লোকেশন / ঠিকানা</p>
                 <p className="ff-head mt-1 text-sm font-semibold">
-                  Rajshahi, Bangladesh · available for shoots
+                  রাজশাহী, বাংলাদেশ · যে কোনো শুটিংয়ের জন্য Available
                 </p>
               </div>
             </div>
@@ -99,8 +98,8 @@ export default function Contact() {
 
       <div className="relative z-10 mt-20 border-t" style={{ borderColor: "var(--border)" }}>
         <div className="ff-mono c-muted mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-6 py-6 text-xs sm:flex-row">
-          <p>© {new Date().getFullYear()} Asaduzzaman Al Amin · Cinematographer &amp; Drone Pilot</p>
-          <p>Rajshahi, Bangladesh</p>
+          <p>© {new Date().getFullYear()} আসাদুজ্জামান আল আমিন · Cinematographer &amp; Drone Pilot</p>
+          <p>রাজশাহী, বাংলাদেশ</p>
         </div>
       </div>
     </section>

@@ -2,13 +2,13 @@
 
 import { useState, type MouseEvent } from "react";
 import MuxPlayer from "@mux/mux-player-react";
-import { personalVideos, type PersonalVideo } from "@/data/personalWork";
+import { foodVideos, type FoodVideo } from "@/data/foodWork";
 import Reveal from "./Reveal";
 import SectionTitle from "./SectionTitle";
 
-const filters = ["All", ...Array.from(new Set(personalVideos.map((v) => v.category)))];
+const filters = ["All", ...Array.from(new Set(foodVideos.map((v) => v.category)))];
 
-function Card({ v }: { v: PersonalVideo }) {
+function Card({ v }: { v: FoodVideo }) {
   const [playing, setPlaying] = useState(false);
   const poster = `https://image.mux.com/${v.playbackId}/thumbnail.jpg?time=2&width=1280`;
   const isVertical = v.ratio === "9/16";
@@ -37,9 +37,9 @@ function Card({ v }: { v: PersonalVideo }) {
     >
       {/* media */}
       <div
-        className={`relative overflow-hidden bg-black ${
-          v.featured ? "lg:w-3/5" : ""
-        } ${isVertical ? "mx-auto w-full max-w-[320px]" : "w-full"}`}
+        className={`relative overflow-hidden bg-black ${v.featured ? "lg:w-3/5" : ""} ${
+          isVertical ? "mx-auto w-full max-w-[320px]" : "w-full"
+        }`}
         style={{ aspectRatio: v.ratio }}
       >
         {playing ? (
@@ -59,7 +59,7 @@ function Card({ v }: { v: PersonalVideo }) {
             aria-label={`Play ${v.title}`}
             className="absolute inset-0 h-full w-full"
           >
-            
+            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={poster}
               alt={v.title}
@@ -79,9 +79,11 @@ function Card({ v }: { v: PersonalVideo }) {
               </span>
             )}
 
-            <span className="ff-mono absolute bottom-5 left-6 text-[10px] uppercase tracking-[0.2em] text-white/80">
-              {v.gear}
-            </span>
+            {v.gear && (
+              <span className="ff-mono absolute bottom-5 left-6 right-6 truncate text-left text-[10px] uppercase tracking-[0.2em] text-white/80">
+                {v.gear}
+              </span>
+            )}
 
             <span className="absolute left-1/2 top-1/2 grid h-16 w-16 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full border border-white/40 bg-white/10 backdrop-blur-md transition-transform duration-300 group-hover:scale-110">
               <svg viewBox="0 0 24 24" className="ml-0.5 h-6 w-6 fill-white">
@@ -103,16 +105,18 @@ function Card({ v }: { v: PersonalVideo }) {
         </div>
 
         <h3 className="ff-head mt-1 text-2xl font-bold">{v.title}</h3>
-        <p className="c-muted mt-1 text-sm">{v.tagline}</p>
+        {v.client && (
+          <p className="ff-mono mt-1 text-[11px] uppercase tracking-wider" style={{ color: "var(--b)" }}>
+            Client · {v.client}
+          </p>
+        )}
+        <p className="c-muted mt-2 text-sm">{v.tagline}</p>
 
         {v.notes && (
           <ul className="mt-4 space-y-2">
             {v.notes.map((line) => (
               <li key={line} className="c-muted flex gap-2.5 text-[13.5px] leading-relaxed">
-                <span
-                  className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full"
-                  style={{ background: "var(--b)" }}
-                />
+                <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full" style={{ background: "var(--b)" }} />
                 {line}
               </li>
             ))}
@@ -137,15 +141,15 @@ function Card({ v }: { v: PersonalVideo }) {
   );
 }
 
-export default function PersonalWork() {
+export default function FoodWork() {
   const [filter, setFilter] = useState<string>("All");
-  const list = personalVideos.filter((v) => filter === "All" || v.category === filter);
+  const list = foodVideos.filter((v) => filter === "All" || v.category === filter);
 
   return (
-    <section id="personal-work" className="relative py-24">
+    <section id="restaurants" className="relative py-24" style={{ background: "var(--bg2)" }}>
       <div className="mx-auto max-w-6xl px-6">
         <div className="flex flex-wrap items-end justify-between gap-6">
-          <SectionTitle eyebrow="Personal work" title="Things I shoot for myself" />
+          <SectionTitle eyebrow="Food & Restaurant Films" title="Making food look irresistible" />
           <div className="flex flex-wrap gap-2">
             {filters.map((f) => (
               <button
@@ -160,6 +164,11 @@ export default function PersonalWork() {
             ))}
           </div>
         </div>
+
+        <p className="c-muted mt-6 max-w-xl text-[15px] leading-relaxed">
+          Restaurant films, Facebook food ads, reels and menu shoots, with close-up detail, clean lighting
+          and edits built to make people hungry.
+        </p>
 
         <div className="mt-12 grid items-start gap-6 lg:grid-cols-2">
           {list.map((v, i) => (

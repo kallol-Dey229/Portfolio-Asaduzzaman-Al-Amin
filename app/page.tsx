@@ -6,8 +6,9 @@ import Contact from "@/components/Contact";
 import ScrollUI from "@/components/ScrollUI";
 import CommandPalette from "@/components/CommandPalette";
 import RestaurantWork from "@/components/RestaurantWork";
-import PersonalWork from "@/components/PersonalWork";
+
 import BeforeAfter from "@/components/Beforeafter";
+import FoodWork from "@/components/FoodWork";
 
 
 
@@ -20,7 +21,7 @@ export default function Home() {
       <main>
         <Hero />
         <RestaurantWork />
-        <PersonalWork />
+        <FoodWork />
         <BeforeAfter />
         <About />
         {/* <Education /> */}

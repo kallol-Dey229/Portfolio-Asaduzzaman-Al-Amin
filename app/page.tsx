@@ -5,10 +5,9 @@ import About from "@/components/About";
 import Contact from "@/components/Contact";
 import ScrollUI from "@/components/ScrollUI";
 import CommandPalette from "@/components/CommandPalette";
-import RestaurantWork from "@/components/RestaurantWork";
-
-import BeforeAfter from "@/components/Beforeafter";
 import FoodWork from "@/components/FoodWork";
+import RallyWork from "@/components/RallyWork";
+import SportsWork from "@/components/SportsWork";
 
 
 
@@ -20,9 +19,9 @@ export default function Home() {
       <CommandPalette />
       <main>
         <Hero />
-        <RestaurantWork />
         <FoodWork />
-        <BeforeAfter />
+        <RallyWork />
+        <SportsWork />
         <About />
         {/* <Education /> */}
         <Contact />

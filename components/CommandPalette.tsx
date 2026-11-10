@@ -16,16 +16,16 @@ export default function CommandPalette() {
   const items: Item[] = useMemo(
   () => [
     { label: "Go to Home", hint: "Section", run: () => go("top") },
-    { label: "Go to Restaurant work", hint: "Section", run: () => go("restaurants") },
-    { label: "Go to Personal work", hint: "Section", run: () => go("personal-work") },
-    { label: "Go to Before / After", hint: "Section", run: () => go("before-after") },
+    { label: "Go to Food work", hint: "Section", run: () => go("restaurants") },
+    { label: "Go to Rally work", hint: "Section", run: () => go("rallies") },
+    { label: "Go to Sports work", hint: "Section", run: () => go("sports") },
     { label: "Go to About", hint: "Section", run: () => go("about") },
     // { label: "Go to Education", hint: "Section", run: () => go("education") },
     { label: "Go to Contact", hint: "Section", run: () => go("contact") },
     { label: "Toggle light / dark theme", hint: "Action", run: () => window.dispatchEvent(new Event("toggle-theme")) },
-    { label: "Send me an email", hint: "Action", run: () => (window.location.href = "mailto:rafsan.zaman.pro@gmail.com") },
-    { label: "Open Instagram", hint: "Link", run: () => open("#") },
-    { label: "Open Facebook", hint: "Link", run: () => open("#") },
+    { label: "Send me an email", hint: "Action", run: () => (window.location.href = "mailto:mralamin0001@gmail.com") },
+    { label: "Open WhatsApp", hint: "Link", run: () => open("https://wa.me/8801716088918") },
+    { label: "Open Facebook", hint: "Link", run: () => open("https://www.facebook.com/share/19o7PGXq4E/") },
   ],
   []
 );

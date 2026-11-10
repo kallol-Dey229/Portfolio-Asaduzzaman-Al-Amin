@@ -2,9 +2,9 @@
 import { useEffect, useState } from "react";
 
 const links = [
-  { href: "#restaurants", label: "Restaurant Work" },
-  { href: "#personal-work", label: "Personal Work" },
-  { href: "#before-after", label: "Before/After" },
+  { href: "#restaurants", label: "Food Work" },
+  { href: "#rallies", label: "Rally Work" },
+  { href: "#sports", label: "Sports Work" },
   { href: "#about", label: "About" },
   // { href: "#education", label: "Education" },
   { href: "#contact", label: "Contact" },
@@ -56,12 +56,12 @@ export default function Header() {
 
   return (
     <header className="fixed left-0 top-4 z-50 w-full px-4">
-      <div className="glass mx-auto flex max-w-4xl items-center justify-between rounded-full px-5 py-2.5 shadow-xl shadow-black/20">
+      <div className="glass mx-auto flex max-w-5xl items-center justify-between rounded-full px-5 py-2.5 shadow-xl shadow-black/20">
         <a href="#top" className="ff-head text-lg font-bold">
           A<span className="grad-text">A</span>
         </a>
 
-        <nav className="ff-mono hidden gap-1 text-[12.5px] md:flex">
+        <nav className="ff-mono hidden gap-0.5 text-[12px] md:flex">
           {links.map((l) => {
             const on = active === l.href.slice(1);
             return (

@@ -37,7 +37,7 @@ export const rallyVideos: RallyVideo[] = [
     category: "Public Meeting",
     playbackId: "9eIeokXVnepWfLn00f7LKLpj3gE4sJDGecALxddYe02L8",
     ratio: "16/9",
-    client: "Organizer name",
+    client: "Shibir Program",
     location: "Rajshahi",
     year: "2025",
     gear: "Sony A7 IV · Sony GM 24-70mm",

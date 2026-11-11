@@ -74,14 +74,14 @@ function Card({ v }: { v: FoodVideo }) {
             <span className="absolute bottom-3 right-3 h-4 w-4 border-b-2 border-r-2 border-white/60" />
 
             {v.featured && (
-              <span className="btn-grad ff-mono absolute left-6 top-6 rounded-full px-3 py-1 text-[10.5px] font-medium uppercase tracking-wider">
-                ★ Featured Story
+              <span className="btn-grad ff-mono absolute left-6 top-6 rounded-full px-3 py-1 text-[11.5px] font-medium">
+                ★ সেরা কাজ
               </span>
             )}
 
             {v.gear && (
               <span className="ff-mono absolute bottom-5 left-6 right-6 truncate text-left text-[10px] uppercase tracking-[0.2em] text-white/80">
-                Gear · {v.gear}
+                {v.gear}
               </span>
             )}
 
@@ -106,8 +106,8 @@ function Card({ v }: { v: FoodVideo }) {
 
         <h3 className="ff-head mt-1 text-2xl font-bold">{v.title}</h3>
         {v.client && (
-          <p className="ff-mono mt-1 text-[11px] uppercase tracking-wider" style={{ color: "var(--b)" }}>
-            Client · {v.client}
+          <p className="ff-mono mt-1 text-[12px]" style={{ color: "var(--b)" }}>
+            client · {v.client}
           </p>
         )}
         <p className="c-muted mt-2 text-sm">{v.tagline}</p>
@@ -146,12 +146,12 @@ export default function FoodWork() {
   const list = foodVideos.filter((v) => filter === "All" || v.category === filter);
 
   return (
-    <section id="restaurants" className="relative py-24" style={{ background: "var(--bg2)" }}>
+    <section id="work" className="relative py-24" style={{ background: "var(--bg2)" }}>
       <div className="mx-auto max-w-6xl px-6">
         <div className="flex flex-wrap items-end justify-between gap-6">
-          <SectionTitle 
-            eyebrow="খাবার ও ডকুমেন্টারি ফিল্মস" 
-            title="Documentary Shoots | Food Videos | Facebook Ads" 
+          <SectionTitle
+            eyebrow="Ads, Documentary ও Corporate"
+            title="শুধু ভিডিও নয়, তৈরি করি আপনার ব্র্যান্ডের অনন্য পরিচয়"
           />
           <div className="flex flex-wrap gap-2">
             {filters.map((f) => (
@@ -162,14 +162,15 @@ export default function FoodWork() {
                   filter === f ? "btn-grad" : "btn-ghost c-muted"
                 }`}
               >
-                {f}
+                {f === "All" ? "সব কাজ" : f}
               </button>
             ))}
           </div>
         </div>
 
-        <p className="c-muted mt-6 max-w-2xl text-[15px] leading-relaxed">
-          আমাদের তৈরি প্রফেশনাল ডকুমেন্টারি ফিল্ম, ফেসবুক ফুড অ্যাডস, রিলস এবং মেনু শুট—যা প্রতিটি খাবারের ক্লোজ-আপ ডিটেইল, নিখুঁত লাইটিং এবং প্রিমিয়াম এডিটিংয়ের মাধ্যমে দর্শকের ক্ষুধা বাড়িয়ে তুলতে জাদুকরী ভূমিকা পালন করে।
+        <p className="c-muted mt-6 max-w-2xl text-[15px] leading-[1.85]">
+          Facebook ad ভিডিও, Documentary আর Corporate shoot, সবকিছুতেই থাকে পরিষ্কার visual, জোরালো
+          গল্প বলার ধরন আর এমন এডিটিং, যা দর্শককে শেষ পর্যন্ত ধরে রাখে।
         </p>
 
         <div className="mt-12 grid items-start gap-6 lg:grid-cols-2">

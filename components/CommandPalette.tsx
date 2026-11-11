@@ -16,7 +16,7 @@ export default function CommandPalette() {
   const items: Item[] = useMemo(
   () => [
     { label: "Go to Home", hint: "Section", run: () => go("top") },
-    { label: "Go to Food work", hint: "Section", run: () => go("restaurants") },
+    { label: "Go to Documentary & Ads", hint: "Section", run: () => go("work") },
     { label: "Go to Rally work", hint: "Section", run: () => go("rallies") },
     { label: "Go to Sports work", hint: "Section", run: () => go("sports") },
     { label: "Go to About", hint: "Section", run: () => go("about") },

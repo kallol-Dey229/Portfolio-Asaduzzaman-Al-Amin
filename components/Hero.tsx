@@ -88,7 +88,7 @@ export default function Hero() {
 
           <div className="mt-9 flex flex-wrap items-center gap-4">
             <a
-              href="#restaurants"
+              href="#work"
               className="btn-grad group ff-mono inline-flex items-center gap-2 rounded-full px-6 py-3.5 text-sm font-medium"
             >
               View my work{" "}

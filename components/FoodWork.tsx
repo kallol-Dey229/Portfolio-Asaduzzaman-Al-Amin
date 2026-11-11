@@ -150,8 +150,8 @@ export default function FoodWork() {
       <div className="mx-auto max-w-6xl px-6">
         <div className="flex flex-wrap items-end justify-between gap-6">
           <SectionTitle 
-            eyebrow="খাবার ও রেস্তোরাঁ ফিল্মস" 
-            title="Restaurant Films | Food Videos | Facebook Ads | Documentary Shoots" 
+            eyebrow="খাবার ও ডকুমেন্টারি ফিল্মস" 
+            title="Documentary Shoots | Food Videos | Facebook Ads" 
           />
           <div className="flex flex-wrap gap-2">
             {filters.map((f) => (

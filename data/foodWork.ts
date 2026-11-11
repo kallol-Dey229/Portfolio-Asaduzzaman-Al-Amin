@@ -13,25 +13,24 @@ export type FoodVideo = {
   tags?: string[];
 };
 
-// TODO: replace the placeholder playbackIds and details with your real projects
 export const foodVideos: FoodVideo[] = [
-  {
-    title: "The Story Behind the Brand",
-    tagline: "A documentary about the people, the process and the purpose behind a business.",
-    category: "Documentary",
-    playbackId: "YOUR_MUX_PLAYBACK_ID_1",
-    ratio: "16/9",
-    featured: true,
-    client: "Subject / Producer name",
-    location: "Rajshahi",
-    year: "2026",
-    gear: "Sony FX3 · GM 24-70mm · DJI RS 4",
-    notes: [
-      "Follows real people at work, with honest interviews and natural sound.",
-      "Ground footage with aerial views to set the place and the scale.",
-    ],
-    tags: ["Documentary", "Interview", "Gimbal", "Colour grade"],
-  },
+  // {
+  //   title: "The Story Behind the Brand",
+  //   tagline: "A documentary about the people, the process and the purpose behind a business.",
+  //   category: "Documentary",
+  //   playbackId: "YOUR_MUX_PLAYBACK_ID_1",
+  //   ratio: "16/9",
+  //   featured: true,
+  //   client: "Subject / Producer name",
+  //   location: "Rajshahi",
+  //   year: "2026",
+  //   gear: "Sony FX3 · GM 24-70mm · DJI RS 4",
+  //   notes: [
+  //     "Follows real people at work, with honest interviews and natural sound.",
+  //     "Ground footage with aerial views to set the place and the scale.",
+  //   ],
+  //   tags: ["Documentary", "Interview", "Gimbal", "Colour grade"],
+  // },
   {
     title: "Facebook Ad Video",
     tagline: "A short, punchy ad built to stop the scroll and drive action.",
@@ -48,20 +47,21 @@ export const foodVideos: FoodVideo[] = [
     ],
     tags: ["Facebook Ad", "Vertical", "Fast cut"],
   },
-  {
-    title: "Corporate Profile Film",
-    tagline: "A clean, professional film that shows a company's team, work and values.",
-    category: "Corporate Shoot",
-    playbackId: "YOUR_MUX_PLAYBACK_ID_3",
-    ratio: "16/9",
-    client: "Company name",
-    location: "Rajshahi",
-    year: "2026",
-    gear: "Sony A7 III · Sony 85mm · DJI Air 3S",
-    notes: [
-      "Office, team and leadership shots with soft, even lighting.",
-      "Drone exterior and a clear voice-over or interview to tell the company story.",
-    ],
-    tags: ["Corporate", "Interview", "Drone", "Lighting"],
-  },
+//   {
+//     title: "Corporate Profile Film",
+//     tagline: "A clean, professional film that shows a company's team, work and values.",
+//     category: "Corporate Shoot",
+//     playbackId: "YOUR_MUX_PLAYBACK_ID_3",
+//     ratio: "16/9",
+//     client: "Company name",
+//     location: "Rajshahi",
+//     year: "2026",
+//     gear: "Sony A7 III · Sony 85mm · DJI Air 3S",
+//     notes: [
+//       "Office, team and leadership shots with soft, even lighting.",
+//       "Drone exterior and a clear voice-over or interview to tell the company story.",
+//     ],
+//     tags: ["Corporate", "Interview", "Drone", "Lighting"],
+//   },
+// 
 ];
